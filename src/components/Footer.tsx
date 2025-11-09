@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="bg-dark text-white py-8 lg:py-16">
+    <footer className="bg-dark relative text-white py-8 lg:py-16">
       <div className="container">
         <div className="flex items-start justify-between">
           <div className="space-y-6 inline-block max-w-md">
@@ -33,6 +33,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <img
+        src="/assets/images/footer/footer-bg.png"
+        alt="footer-img"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
     </footer>
   );
 };

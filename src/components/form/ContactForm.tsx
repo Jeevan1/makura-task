@@ -13,10 +13,10 @@ const ContactForm = () => {
           name="message"
           label="Message"
           type="textarea"
-          width="col-span-2"
+          width="sm:col-span-2"
         />
       </div>
-      <Button className="button-primary mt-4.5">Send Message</Button>
+      <Button className="mt-4.5">Send Message</Button>
     </form>
   );
 };

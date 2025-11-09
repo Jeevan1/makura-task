@@ -7,7 +7,7 @@ const SectionHeading = ({
 }) => {
   return (
     <div
-      className={`md:flex justify-between items-center mb-8 md:mb-16 ${className}`}
+      className={`md:flex justify-between items-center mb-8 md:mb-16 space-y-6 ${className}`}
     >
       {children}
     </div>

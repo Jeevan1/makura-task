@@ -22,7 +22,7 @@ const KeyAspects = () => {
   return (
     <section className="bg-white pt-16 lg:pt-26 ">
       <div className="container">
-        <div className="max-w-3xl mx-auto text-center space-y-8 mb-8">
+        <div className="max-w-3xl mx-auto lg:text-center space-y-4 lg:space-y-8 mb-8">
           <Badge
             icon="/assets/icons/trust.svg"
             title="Delivering Trust"
@@ -38,19 +38,19 @@ const KeyAspects = () => {
           <div className="relative rounded-2xl p-8 lg:px-10 lg:py-8 lg:max-w-[90%] mx-auto">
             <div className="absolute inset-0 bg-background rounded-2xl"></div>
             <div className="relative z-3">
-              <div className="lg:grid lg:grid-cols-3 items-center gap-6 pe-6">
+              <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-4 lg:gap-6 pe-6">
                 {keyAspects.map((item, index) => (
                   <div
-                    className={`mb-6 ${
+                    className={`mb-4 lg:mb-6 ${
                       index !== keyAspects.length - 1
-                        ? "border-r border-gray-300"
+                        ? "border-b lg:border-b-0 lg:border-r border-solid pb-6 lg:pb-0 border-gray-300"
                         : ""
                     }`}
                     key={index}
                   >
                     <img
                       alt=""
-                      className="mb-4 h-10 w-10 object-contain"
+                      className="mb-4 h-8 lg:h-10 w-8 lg:w-10 object-contain"
                       src={item.icon}
                     />
                     <h5 className="font-semibold text-xl text-black/90">

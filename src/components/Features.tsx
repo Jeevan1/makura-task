@@ -55,11 +55,14 @@ const Features = () => {
   };
 
   return (
-    <section className="bg-white [clip-path:polygon(80px_0,100%_0,100%_100%,0_100%,0_80px)] pt-16 lg:pt-26 transform translate-y-px">
+    <section
+      className="bg-white [clip-path:polygon(80px_0,100%_0,100%_100%,0_100%,0_80px)] pt-16 lg:pt-26 transform translate-y-px"
+      id="features"
+    >
       <div className="container">
         <SectionHeading>
           <div className="mb-4 lg:max-w-139 md:mb-0">
-            <h2 className="font-semibold text-5xl leading-14 tracking-normal">
+            <h2 className="font-semibold text-4xl lg:text-5xl leading-tight lg:leading-14 tracking-normal">
               No Middle Man : Just Bank to Bank with{" "}
               <span className="text-primary">Finconex Bahrain</span>
             </h2>
@@ -71,18 +74,18 @@ const Features = () => {
             and services tailored to your needs.
           </p>
         </SectionHeading>
-        <div className="pt-14 bg-background p-8 rounded-2xl lg:px-16 lg:py-12">
+        <div className="pt-14 bg-background p-4 md:p-8 rounded-2xl lg:px-16 lg:py-12">
           <div className="lg:grid lg:grid-cols-3 items-center">
             <div className="col-span-1">
               <ul className="mb-6 lg:mb-0 border-l-2 border-gray-300">
                 {data.map((item, index) => (
                   <li
                     key={item.id}
-                    className={`ps-5 pb-12 ${
+                    className={`ps-5 ${
                       activeFeature?.id === item.id
                         ? "border-l-2 border-primary -translate-x-0.5"
                         : ""
-                    }`}
+                    } ${index === data.length - 1 ? "pb-4" : "pb-8 lg:pb-12"}`}
                   >
                     <button
                       className="text-left cursor-pointer lg:max-w-[278px] lg:mx-auto font-semibold text-lg lg:text-xl leading-5 lg:leading-6"
@@ -98,7 +101,7 @@ const Features = () => {
                         {item.title}
                       </h5>
                       <p
-                        className={`hidden lg:block lg:text-[18px] mt-2 ${
+                        className={`block text-base lg:text-[18px] mt-2 ${
                           activeFeature?.id === item.id
                             ? "text-dark"
                             : "text-dark/40"
@@ -115,27 +118,27 @@ const Features = () => {
               <div className="">
                 <div className="grid md:grid-cols-2 gap-8 lg:gap-13 items-center">
                   <div
-                    className={`md:order-2 flex flex-col gap-4 transition duration-300`}
+                    className={`md:order-2 flex flex-col gap-3 md:gap-4 transition duration-300`}
                   >
                     <img
                       alt={activeFeature?.content?.title}
-                      className="max-w-14"
+                      className="w-10 md:max-w-14"
                       src={activeFeature?.content?.icon}
                     />
                     <h4 className="font-semibold text-2xl">
                       {activeFeature?.content?.title}
                     </h4>
-                    <strong className="text-[18px] text-dark/50">
+                    <strong className="text-[18px] text-dark/50 font-semibold">
                       {activeFeature?.content?.subtitle}
                     </strong>
                     <p className="text-md">
                       {activeFeature?.content?.description}
                     </p>
                   </div>
-                  <div className="md:order-1 w-[348px] rounded-lg overflow-hidden">
+                  <div className="md:order-1 w-full lg:max-w-[348px] rounded-lg overflow-hidden">
                     <img
                       alt=""
-                      className="w-[348px] h-[386px] object-cover"
+                      className=" w-full h-[386px] object-cover"
                       src={activeFeature?.image}
                     />
                   </div>

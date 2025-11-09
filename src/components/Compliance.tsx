@@ -33,18 +33,18 @@ export const complianceCards: ComplianceCard[] = [
 
 const Compliance = () => {
   return (
-    <section className="pt-16 lg:pt-26 text-white">
+    <section className="pt-16 lg:pt-26 text-white" id="compliance">
       <div className="container">
-        <div className="space-y-8">
+        <div className="space-y-4 md:space-y-8">
           <Badge icon="/assets/icons/compliance.svg" title="Compliance" />
           <SectionHeading>
             <div className="max-w-3xl">
-              <h2 className="text-5xl leading-14 font-semibold">
+              <h2 className=" text-3xl md:text-5xl leading-12 md:leading-14 font-semibold">
                 Central Bank of Bahrain{" "}
                 <span className="italic">Compliance &amp; Security</span>
               </h2>
             </div>
-            <Link to="#contact-us" className="button-primary">
+            <Link to="#contact-us">
               <Button>Contact Us</Button>
             </Link>
           </SectionHeading>
@@ -53,15 +53,15 @@ const Compliance = () => {
           {complianceCards.map((item) => (
             <div key={item.id} className="text-dark">
               <div className=" bg-white rounded-2xl md:h-full md:flex flex-col justify-between border border-solid border-transparent hover:border-background">
-                <div className="pt-9 lg:pr-12 px-8">
+                <div className="pt-6 lg:pt-9 lg:pr-12 px-8">
                   <h4 className="mb-3 font-bold text-2xl">{item.title}</h4>
                   <p className="text-lg text-dark/70">{item.description}</p>
                 </div>
-                <div className="rounded-[14px] p-1 mt-8">
+                <div className="rounded-[14px] p-1 mt-4 lg:mt-8">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-full object-cover"
+                    className="h-full w-full object-cover"
                   />
                 </div>
               </div>

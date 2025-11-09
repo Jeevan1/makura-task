@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import SectionHeading from "./SectionHeading";
 import Badge from "./ui/Badge";
-import { Button } from "./ui/Button";
 import Slider from "react-slick";
 
 type TeamMember = {
@@ -75,9 +74,12 @@ const Teams = () => {
     ],
   };
   return (
-    <section className=" bg-white py-16 lg:py-26 text-dark overflow-hidden">
+    <section
+      className=" bg-white py-16 lg:py-26 text-dark overflow-hidden"
+      id="teams"
+    >
       <div className="container">
-        <div className="space-y-8">
+        <div className="space-y-4 md:space-y-8 lg:space-y-8">
           <Badge
             icon="/assets/images/menu/menu-4.svg"
             title="Teams"
@@ -86,15 +88,16 @@ const Teams = () => {
           />
           <SectionHeading className="items-end">
             <div className="max-w-xl">
-              <h2 className="text-5xl leading-14 font-semibold">
+              <h2 className="lg:text-5xl text-3xl leading-snug lg:leading-14 font-semibold">
                 <span className="italic text-primary">The Minds</span> Behind
                 Finconex
               </h2>
             </div>
-            <div className="slider-controller md:flex justify-center lg:justify-end gap-3 hidden">
+            <div className="md:flex justify-center lg:justify-end gap-3 hidden">
               {/* Prev Button */}
-              <Button
-                className="group prev-slider w-14 h-14 aspect-square rounded-full flex justify-center items-center bg-background hover:bg-primary transition-colors duration-300"
+              <button
+                type="button"
+                className="group w-14 h-14 aspect-square rounded-full flex justify-center items-center bg-background cursor-pointer hover:bg-primary transition-colors duration-300"
                 onClick={() => {
                   sliderRef.current?.slickPrev();
                 }}
@@ -113,11 +116,12 @@ const Teams = () => {
                     className="group-hover:fill-white transition-colors duration-300"
                   />
                 </svg>
-              </Button>
+              </button>
 
               {/* Next Button */}
-              <Button
-                className="group next-slider w-14 h-14 aspect-square rounded-full flex justify-center items-center bg-background hover:bg-primary rotate-180 transition-colors duration-300"
+              <button
+                type="button"
+                className="group w-14 h-14 aspect-square rounded-full flex justify-center items-center cursor-pointer bg-background hover:bg-primary rotate-180 transition-colors duration-300"
                 onClick={() => sliderRef.current?.slickNext()}
               >
                 <svg
@@ -134,12 +138,12 @@ const Teams = () => {
                     className="group-hover:fill-white transition-colors duration-300"
                   />
                 </svg>
-              </Button>
+              </button>
             </div>
           </SectionHeading>
         </div>
       </div>
-      <div className="team-slider ps-40">
+      <div className="team-slider md:ps-20 lg:ps-40">
         <Slider {...settings} ref={sliderRef}>
           {teamMembers.map((member) => (
             <div key={member.id} className="cursor-pointer p-4">
@@ -148,14 +152,14 @@ const Teams = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="mx-auto w-full h-[380px] object-cover hover:scale-105 transition-all duration-300"
+                    className="mx-auto w-full min-h-80 h-full lg:h-[380px] object-cover hover:scale-105 transition-all duration-300"
                   />
                 </div>
                 <div className="mt-4">
-                  <h4 className="font-bold text-2xl leading-6">
+                  <h4 className="font-bold text-xl lg:text-2xl leading-6">
                     {member.name}
                   </h4>
-                  <p className="text-gray-500 text-lg mt-4">
+                  <p className="text-gray-500 text-lg mt-2 lg:mt-4">
                     {member?.position}
                   </p>
                 </div>

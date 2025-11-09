@@ -18,7 +18,10 @@ const featuresData = [
 
 const WhyFinconex = () => {
   return (
-    <section className="relative bg-white py-16 lg:py-26 overflow-hidden">
+    <section
+      className="relative bg-white py-16 lg:py-26 overflow-hidden"
+      id="why-finconex"
+    >
       <div className="absolute right-0 bottom-0 h-87 transform translate-x-3 translate-y-8">
         <img
           src="/assets/images/why/bg.svg"
@@ -41,13 +44,13 @@ const WhyFinconex = () => {
                 "polygon(0 0, calc(100% - 60px) 0, 100% 60px, 100% 100%, 0% 100%)",
             }}
           />
-          <div className="lg:py-8">
+          <div className="lg:py-8 space-y-4">
             <img
               src="/favicon.png"
               alt="finconex"
               className="w-16 h-16 object-cover"
             />
-            <h3 className="font-semibold text-[32px] text-dark">
+            <h3 className="font-semibold text-[32px] leading-tight text-dark">
               Finconex Bahrain is designed to
             </h3>
             <p className="text-base text-dark/70">
@@ -58,9 +61,9 @@ const WhyFinconex = () => {
               {featuresData.map((item, index) => (
                 <div
                   key={item.id}
-                  className={`flex items-center gap-3 ${
+                  className={`flex items-center gap-4 ${
                     index !== featuresData.length - 1
-                      ? "border-b border-gray-300 py-4"
+                      ? "border-b border-gray-300 py-2 md:py-4"
                       : ""
                   }`}
                 >

@@ -49,7 +49,7 @@ const Banner = () => {
           'url("/assets/images/baner/banner-bg.png") left center / cover no-repeat',
       }}
     >
-      <div className="container flex-1">
+      <div className="container px-40 flex-1">
         <div className="flex h-full flex-col items-center lg:flex-row justify-start gap-9 lg:gap-0">
           {/* Banner details */}
           <div className="w-full lg:w-3/5 z-1">
@@ -58,15 +58,15 @@ const Banner = () => {
 
             {/* Title and list */}
             <div>
-              <h1 className="text-white opacity-100 transform-none leading-[72px] text-4xl font-normal -tracking-[1px]">
+              <h1 className="text-white opacity-100 transform-none leading-[72px] text-2xl md:text-4xl font-normal -tracking-[1px]">
                 Finconex can help you to
               </h1>
               <div className="opacity-100 transform-none">
-                <ul className="relative h-48 w-full min-w-4xl overflow-hidden">
+                <ul className="relative h-36 lg:h-48 w-full lg:min-w-4xl overflow-hidden">
                   {bannerList.map((item, index) => (
                     <li
                       key={item.id}
-                      className={`text-[4rem] font-bold text-primary leading-19 -tracking-[1px] absolute transition-all duration-700 ease-in-out
+                      className={`text-4xl lg:text-[4rem] font-bold text-primary leading-relaxed lg:leading-19 -tracking-[1px] absolute transition-all duration-700 ease-in-out
                             ${
                               index === currentIndex
                                 ? "opacity-100 translate-y-0"
@@ -85,7 +85,7 @@ const Banner = () => {
             </div>
 
             {/* Features */}
-            <div className="opacity-100 transform-none flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2">
                 <img
                   alt="banner"
@@ -119,7 +119,7 @@ const Banner = () => {
             </p>
 
             <Link to="#contact" className="mt-8 inline-block">
-              <Button className="button-primary">Get In Touch With Us</Button>
+              <Button>Get In Touch With Us</Button>
             </Link>
           </div>
 
@@ -127,7 +127,7 @@ const Banner = () => {
           <div className="relative w-ful lg:w-1/2 flex justify-center pt-8 md:pt-0 lg:absolute right-0 -bottom-3 lg:max-w-[804px]">
             <img
               alt="Finconex App Interface"
-              className="lg:max-w-[804px] w-[498px] h-[590px] object-cover z-1"
+              className="lg:max-w-[804px] w-[498px] lg:h-[590px] object-cover z-1"
               src="/assets/images/baner/banner-img.png"
             />
 
@@ -145,6 +145,7 @@ const Banner = () => {
               icon="/assets/icons/bank.svg"
               title="Your bank was successfully connected"
               className="absolute gap-4 h-auto w-[330px] -top-6 left-[35%] text-xl z-1 backdrop-blur-md"
+              textStyle="text-lg"
               iconSize="md"
             />
 
@@ -153,16 +154,16 @@ const Banner = () => {
               <img
                 alt="banner element 2"
                 src="/assets/images/baner/banner-element-2.svg"
-                className="w-48.5 object-cover"
+                className="w-38 md:w-42 lg:w-48.5 object-cover"
               />
             </div>
 
             {/* element-3  */}
-            <div className="absolute -bottom-10 left-10 transform -translate-y-1/2 backdrop-blur-sm z-1 ">
+            <div className="absolute -bottom-14 lg:-bottom-10 left-10 transform -translate-y-1/2 backdrop-blur-sm z-1 ">
               <img
                 alt="banner element 3"
                 src="/assets/images/baner/banner-element-3.svg"
-                className="w-53.5 object-cover"
+                className="w-48 md:w-53 lg:w-53.5 object-cover"
               />
             </div>
           </div>

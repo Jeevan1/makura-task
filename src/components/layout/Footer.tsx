@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark relative text-white py-8 lg:py-16">
       <div className="container">
-        <div className="flex items-start justify-between">
+        <div className="flex flex-col md:flex-row items-start justify-between">
           <div className="space-y-6 inline-block max-w-md">
             <img
               src="/logo.png"
@@ -16,8 +16,8 @@ const Footer = () => {
             </p>
             <p className="text-sm text-gray-400">© 2025. Finconex pty.</p>
           </div>
-          <div className="flex flex-col flex-1 items-end">
-            <div className="max-w-sm">
+          <div className="md:flex flex-col flex-1 items-end">
+            <div className="max-w-sm space-y-4">
               <div>
                 <p>Call Us</p>
                 <p className="text-primary">+786 374 6686</p>

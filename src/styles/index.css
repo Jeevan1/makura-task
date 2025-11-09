@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ee2248;
+  --color-background: #e6e8e8;
+  --color-dark: #04142c;
+  --color-light: #e6e8e8;
+  --color-gray: #8c8c8c;
+  --color-neon: #06223e;
+  --color-white: #fff;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+
+  --color-primary: #ee2248;
+  --color-background: #e6e8e8;
+  --color-neon: #06223e;
+  --color-dark: #04142c;
+  --color-white: #fff;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: black;
+    background-color: var(--background);
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+  clip-path: polygon(
+    0px 0px,
+    calc(100% - 15px) 0px,
+    100% 15px,
+    100% 100%,
+    0% 100%,
+    0px 0px
+  );
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 100%;
+  position: relative;
+  padding: 12px 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.slick-slide > div > div {
+  padding: 8px !important;
+}

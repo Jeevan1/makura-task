@@ -9,7 +9,7 @@ const featuresData = [
     image: "/assets/images/feature/feature-1.png",
     content: {
       id: 1,
-      icon: "/assets/images/icons/feature/icon-1.png",
+      icon: "/assets/icons/feature/icon-1.png",
       title: "Save Time Save Money",
       subtitle: "Fastest onboard users",
       description:
@@ -23,7 +23,7 @@ const featuresData = [
     image: "/assets/images/feature/feature-2.png",
     content: {
       id: 1,
-      icon: "/assets/images/icons/feature/icon-2.png",
+      icon: "/assets/icons/feature/icon-2.png",
       title: "Money at the Speed of Now",
       subtitle: "Instant A-to-A payments with a bank account",
       description:
@@ -37,7 +37,7 @@ const featuresData = [
     image: "/assets/images/feature/feature-3.png",
     content: {
       id: 1,
-      icon: "/assets/images/icons/feature/icon-3.svg",
+      icon: "/assets/icons/feature/icon-3.svg",
       title: "Payments That Work For You",
       subtitle: "Automated Recurring Payment",
       description:

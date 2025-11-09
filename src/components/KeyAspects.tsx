@@ -2,17 +2,17 @@ import Badge from "./ui/Badge";
 
 const keyAspects = [
   {
-    icon: "/assets/images/icons/aspects/icon-1.png",
+    icon: "/assets/icons/aspects/icon-1.png",
     title: "Robust Security Standards",
     description: "that protect your data at every step",
   },
   {
-    icon: "/assets/images/icons/aspects/icon-2.png",
+    icon: "/assets/icons/aspects/icon-2.png",
     title: "Stringent Data Privacy",
     description: "measures that put your information security first",
   },
   {
-    icon: "/assets/images/icons/aspects/icon-3.png",
+    icon: "/assets/icons/aspects/icon-3.png",
     title: "Clear Guidelines",
     description: "for customer authentication and communication",
   },
@@ -24,7 +24,7 @@ const KeyAspects = () => {
       <div className="container">
         <div className="max-w-3xl mx-auto text-center space-y-8 mb-8">
           <Badge
-            icon="/assets/images/icons/trust.svg"
+            icon="/assets/icons/trust.svg"
             title="Delivering Trust"
             className="bg-background"
             textStyle="text-dark font-semibold"

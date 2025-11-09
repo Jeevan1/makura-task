@@ -36,10 +36,7 @@ const Compliance = () => {
     <section className="pt-16 lg:pt-26 text-white">
       <div className="container">
         <div className="space-y-8">
-          <Badge
-            icon="/assets/images/icons/compliance.svg"
-            title="Compliance"
-          />
+          <Badge icon="/assets/icons/compliance.svg" title="Compliance" />
           <SectionHeading>
             <div className="max-w-3xl">
               <h2 className="text-5xl leading-14 font-semibold">

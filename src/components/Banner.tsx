@@ -54,10 +54,7 @@ const Banner = () => {
           {/* Banner details */}
           <div className="w-full lg:w-3/5 z-1">
             {/* Badge */}
-            <Badge
-              icon="/assets/images/icons/trust.svg"
-              title="Delivering Trust"
-            />
+            <Badge icon="/assets/icons/trust.svg" title="Delivering Trust" />
 
             {/* Title and list */}
             <div>
@@ -92,7 +89,7 @@ const Banner = () => {
               <div className="flex items-center gap-2">
                 <img
                   alt="banner"
-                  src="/assets/images/icons/feature/feature-1.svg"
+                  src="/assets/icons/feature/feature-1.svg"
                   className="h-5 w-5 object-cover"
                 />
                 <span>Without hassle</span>
@@ -100,7 +97,7 @@ const Banner = () => {
               <div className="flex items-center gap-2">
                 <img
                   alt="banner"
-                  src="/assets/images/icons/feature/feature-2.svg"
+                  src="/assets/icons/feature/feature-2.svg"
                   className="h-5 w-5 object-cover"
                 />
                 <span>Without costly fee</span>
@@ -108,7 +105,7 @@ const Banner = () => {
               <div className="flex items-center gap-2">
                 <img
                   alt="banner"
-                  src="/assets/images/icons/feature/feature-3.svg"
+                  src="/assets/icons/feature/feature-3.svg"
                   className="h-5 w-5 object-cover"
                 />
                 <span>With speed you deserve</span>
@@ -145,7 +142,7 @@ const Banner = () => {
 
             {/* element-1  */}
             <Badge
-              icon="/assets/images/icons/bank.svg"
+              icon="/assets/icons/bank.svg"
               title="Your bank was successfully connected"
               className="absolute gap-4 h-auto w-[330px] -top-6 left-[35%] text-xl z-1 backdrop-blur-md"
               iconSize="md"

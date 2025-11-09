@@ -31,7 +31,7 @@ const Vison = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-14">
             <div className="flex gap-6">
               <img
-                src="/assets/images/icons/quote.svg"
+                src="/assets/icons/quote.svg"
                 alt="quote"
                 className="h-12 w-12 object-cover"
               />

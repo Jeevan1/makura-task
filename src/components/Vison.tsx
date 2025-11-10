@@ -6,7 +6,7 @@ const Vison = () => {
     <section className="pt-16 lg:py-26 text-dark" id="vision">
       <div className="container">
         <div
-          className="bg-white p-6 md:p-12 lg:p-20"
+          className="bg-white p-6 py-16 md:p-12 lg:p-20"
           style={{
             clipPath:
               "polygon(0px 0px, calc(100% - 60px) 0px, 100% 60px, 100% 100%, 0% 100%, 0px 0px)",

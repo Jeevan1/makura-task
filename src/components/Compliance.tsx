@@ -41,7 +41,9 @@ const Compliance = () => {
             <div className="max-w-3xl">
               <h2 className=" text-3xl md:text-5xl leading-12 md:leading-14 font-semibold">
                 Central Bank of Bahrain{" "}
-                <span className="italic">Compliance &amp; Security</span>
+                <span className="italic text-primary">
+                  Compliance &amp; Security
+                </span>
               </h2>
             </div>
             <Link to="#contact-us">

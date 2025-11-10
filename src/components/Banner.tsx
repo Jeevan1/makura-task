@@ -31,6 +31,24 @@ const bannerList: BannerProps[] = [
   },
 ];
 
+const features = [
+  {
+    id: 1,
+    icon: "/assets/icons/feature/feature-1.svg",
+    title: "Without hassle",
+  },
+  {
+    id: 2,
+    icon: "/assets/icons/feature/feature-2.svg",
+    title: "Without costly fee",
+  },
+  {
+    id: 3,
+    icon: "/assets/icons/feature/feature-3.svg",
+    title: "With speed you deserve",
+  },
+];
+
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -58,15 +76,15 @@ const Banner = () => {
 
             {/* Title and list */}
             <div>
-              <h1 className="text-white opacity-100 transform-none leading-[72px] text-2xl md:text-4xl font-normal -tracking-[1px]">
+              <h1 className="text-white opacity-100 transform-none leading-[72px] text-2xl md:text-4xl -tracking-[1px]">
                 Finconex can help you to
               </h1>
               <div className="opacity-100 transform-none">
-                <ul className="relative h-36 lg:h-48 w-full lg:min-w-4xl overflow-hidden">
+                <ul className="relative h-44  w-full lg:min-w-4xl overflow-hidden">
                   {bannerList.map((item, index) => (
                     <li
                       key={item.id}
-                      className={`text-4xl lg:text-[4rem] font-bold text-primary leading-relaxed lg:leading-19 -tracking-[1px] absolute transition-all duration-700 ease-in-out
+                      className={`text-4xl lg:text-6xl font-bold font-proxima text-primary leading-relaxed lg:leading-18 -tracking-[1px] absolute transition-all duration-700 ease-in-out
                             ${
                               index === currentIndex
                                 ? "opacity-100 translate-y-0"
@@ -86,30 +104,16 @@ const Banner = () => {
 
             {/* Features */}
             <div className="flex flex-wrap gap-4">
-              <div className="flex items-center gap-2">
-                <img
-                  alt="banner"
-                  src="/assets/icons/feature/feature-1.svg"
-                  className="h-5 w-5 object-cover"
-                />
-                <span>Without hassle</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <img
-                  alt="banner"
-                  src="/assets/icons/feature/feature-2.svg"
-                  className="h-5 w-5 object-cover"
-                />
-                <span>Without costly fee</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <img
-                  alt="banner"
-                  src="/assets/icons/feature/feature-3.svg"
-                  className="h-5 w-5 object-cover"
-                />
-                <span>With speed you deserve</span>
-              </div>
+              {features.map((item) => (
+                <div className="flex items-center gap-2">
+                  <img
+                    alt="banner"
+                    src={item.icon}
+                    className="h-5 w-5 object-cover"
+                  />
+                  <span>{item.title}</span>
+                </div>
+              ))}
             </div>
 
             <p className="opacity-100 transform-none mt-4">
@@ -144,8 +148,8 @@ const Banner = () => {
             <Badge
               icon="/assets/icons/bank.svg"
               title="Your bank was successfully connected"
-              className="absolute gap-4 h-auto w-[330px] -top-6 left-[35%] text-xl z-1 backdrop-blur-md"
-              textStyle="text-lg"
+              className="absolute gap-4 h-auto lg:w-[330px] -top-6 left-[35%] text-xl z-1 backdrop-blur-md"
+              textStyle="text-sm md:text-lg"
               iconSize="md"
             />
 

@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import Badge from "./ui/Badge";
 import Slider from "react-slick";
@@ -50,18 +50,35 @@ export const teamMembers: TeamMember[] = [
 ];
 
 const Teams = () => {
+  const [slidesToShow, setSlidesToShow] = useState(5);
+
+  const handleResize = () => {
+    const width = window.innerWidth;
+    if (width <= 480) setSlidesToShow(1);
+    else if (width <= 768) setSlidesToShow(2);
+    else if (width <= 1024) setSlidesToShow(5);
+    else setSlidesToShow(5);
+  };
+
+  useEffect(() => {
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const sliderRef = useRef<Slider>(null);
+
   const settings = {
     dots: false,
     infinite: true,
     speed: 700,
-    slidesToShow: 5,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
-        settings: { slidesToShow: 3 },
+        settings: { slidesToShow: 4 },
       },
       {
         breakpoint: 768,
@@ -73,6 +90,7 @@ const Teams = () => {
       },
     ],
   };
+
   return (
     <section
       className=" bg-white py-16 lg:py-26 text-dark overflow-hidden"
@@ -143,7 +161,7 @@ const Teams = () => {
           </SectionHeading>
         </div>
       </div>
-      <div className="team-slider md:ps-20 lg:ps-40">
+      <div className="md:ps-20 lg:ps-40 w-full slider-container">
         <Slider {...settings} ref={sliderRef}>
           {teamMembers.map((member) => (
             <div key={member.id} className="cursor-pointer p-4">

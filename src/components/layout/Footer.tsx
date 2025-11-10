@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark relative text-white py-8 lg:py-16">
       <div className="container">
-        <div className="flex flex-col md:flex-row items-start justify-between">
+        <div className="flex flex-col gap-6 md:flex-row items-start justify-between">
           <div className="space-y-6 inline-block max-w-md">
             <img
               src="/logo.png"

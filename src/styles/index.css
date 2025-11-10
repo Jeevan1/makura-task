@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-@font-face {
-  font-family: Proxima Nova;
-  src: url("/assets/fonts/proxima-nova-semibold.ttf");
-}
-
 @theme {
   --color-primary: #ee2248;
   --color-background: #e6e8e8;
@@ -14,12 +9,14 @@
   --color-neon: #06223e;
   --color-white: #fff;
 
-  --font-proxima: Proxima Nova, "sans-serif";
+  --font-proxima: Montserrat, "sans-serif";
+  --font-polysans: Archivo, "sans-serif";
 }
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  /* font-weight: 400; */
+  font-family: var(--font-polysans), sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
 
   --color-primary: #ee2248;
   --color-background: #e6e8e8;
@@ -39,50 +36,15 @@ html {
   scroll-behavior: smooth;
 }
 
+p {
+  font-family: var(--font-proxima);
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 0 24px;
 }
-
-/* 
-
-
-@media (max-width: 1024px) {
-  .container {
-    max-width: 1024px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .container {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 0 16px;
-  }
-} */
-
-/* .button-primary {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  cursor: pointer;
-  clip-path: polygon(
-    0px 0px,
-    calc(100% - 15px) 0px,
-    100% 15px,
-    100% 100%,
-    0% 100%,
-    0px 0px
-  );
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 100%;
-  position: relative;
-  padding: 12px 20px;
-  transition: 0.3s ease-in-out;
-} */
 
 .slick-slide > div > div {
   padding: 8px !important;

@@ -34,7 +34,7 @@ const menuItems: MenuItem[] = [
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   return (
-    <header className="relative text-white py-5 flex items-center border-b-2 border-gray-600 bg-dark md:h-20 lg:sticky top-0 z-99">
+    <header className="text-white py-5 flex items-center border-b-2 border-gray-600 bg-dark md:h-20 sticky top-0 z-99">
       <div className="container">
         <div
           className={`flex justify-between md:items-center flex-col md:flex-row`}
@@ -52,9 +52,7 @@ const Header = () => {
                   className=" flex items-center gap-1 py-3 px-2 rounded-sm lg:py-0 lg:px-0 transition duration-200 hover:text-primary"
                 >
                   <img alt={item.title} src={item.icon} className="h-5 w-5" />
-                  <span className="font-proxima italic font-extrabold">
-                    {item.title}
-                  </span>
+                  <span className="">{item.title}</span>
                 </a>
               </li>
             ))}
@@ -64,7 +62,7 @@ const Header = () => {
           </Link>
         </div>
         <div
-          className="md:hidden absolute top-5 right-5 cursor-pointer z-10"
+          className="md:hidden absolute top-6 right-5 cursor-pointer z-10"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {!isMobileMenuOpen ? (
@@ -104,23 +102,22 @@ const Header = () => {
         </div>
         {/* Mobile menu */}
         <div
-          className={`md:hidden transition-all duration-300 ease-in-out border-t border-gray-600 mt-6 ${
+          className={`md:hidden transition-all duration-300 ease-in-out ${
             isMobileMenuOpen
               ? "max-h-[500px] opacity-100 py-4"
               : "max-h-0 opacity-0"
           }`}
         >
-          <ul className="flex flex-col gap-4 font-semibold relative">
+          <ul className="flex flex-col gap-4 font-semibold relative pt-6">
             {menuItems.map((item, index) => (
               <li key={index}>
                 <a
                   href={item.url}
                   className="flex items-center gap-1 py-3 px-2 rounded-sm lg:py-0 lg:px-0 transition duration-200 hover:text-primary"
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   <img alt={item.title} src={item.icon} className="h-5 w-5" />
-                  <span className="font-proxima italic font-extrabold">
-                    {item.title}
-                  </span>
+                  <span className="">{item.title}</span>
                 </a>
               </li>
             ))}

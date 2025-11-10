@@ -64,10 +64,10 @@ const Features = () => {
           <div className="mb-4 lg:max-w-139 md:mb-0">
             <h2 className="font-semibold text-4xl lg:text-5xl leading-tight lg:leading-14 tracking-normal">
               No Middle Man : Just Bank to Bank with{" "}
-              <span className="text-primary">Finconex Bahrain</span>
+              <span className="text-primary italic">Finconex Bahrain</span>
             </h2>
           </div>
-          <p className="lg:max-w-147 text-base">
+          <p className="lg:max-w-147 text-base font-proxima">
             At Finconex Bahrain, we believe your financial information belongs
             to you. Our platform empowers you to securely share your data with
             licensed providers, unlocking a new generation of financial products
@@ -101,7 +101,7 @@ const Features = () => {
                         {item.title}
                       </h5>
                       <p
-                        className={`block text-base lg:text-[18px] mt-2 ${
+                        className={`block text-lg font-proxima lg:text-[18px] mt-2 ${
                           activeFeature?.id === item.id
                             ? "text-dark"
                             : "text-dark/40"
@@ -131,7 +131,7 @@ const Features = () => {
                     <strong className="text-[18px] text-dark/50 font-semibold">
                       {activeFeature?.content?.subtitle}
                     </strong>
-                    <p className="text-md">
+                    <p className="text-md font-proxima">
                       {activeFeature?.content?.description}
                     </p>
                   </div>
